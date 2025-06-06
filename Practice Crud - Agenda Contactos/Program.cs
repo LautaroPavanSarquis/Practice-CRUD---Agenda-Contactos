@@ -1,4 +1,14 @@
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+//Conexion con base de datos local MSSQLLOCAL
+
+builder.Services.AddDbContext<ApplicationDbContext> (options => 
+                options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
