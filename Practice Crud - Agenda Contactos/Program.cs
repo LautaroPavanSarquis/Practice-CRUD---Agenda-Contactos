@@ -2,7 +2,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 
-var builder = WebApplication.CreateBuilder(args);
+   var builder = WebApplication.CreateBuilder(args);
 
 
 //Conexion con base de datos local MSSQLLOCAL
