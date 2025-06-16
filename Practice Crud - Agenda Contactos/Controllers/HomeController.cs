@@ -14,13 +14,33 @@ namespace Practice_Crud___Agenda_Contactos.Controllers
            _context = context; 
         }
 
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Contact.ToListAsync());
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] //Anti ataques xss
+        public IActionResult Create(Contact contact)
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
+            if (ModelState.IsValid) 
+            { 
+            
+            
+            }
+
             return View();
         }
 
