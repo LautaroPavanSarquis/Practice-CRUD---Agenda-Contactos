@@ -1,0 +1,37 @@
+﻿@model Practice_Crud___Agenda_Contactos.Models.Contact
+
+
+@{
+    ViewData["Title"] = "Contact detail";
+}
+
+<h1 class="text-center">Agenda de Contactos</h1>
+
+<div class="row">
+    <div class="offset-9 col-3 mb-3">
+        <a asp-action="Create" asp-controller="Home" class="btn btn-secondary d-block mx-auto btn-lg">
+            <i class="fa fa-plus" aria-hidden="true"></i> Create Contact
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="offset-12">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h3 class="text-white"><strong>Create Contact</strong></h3>
+            </div>
+            <div class="card-body">
+                
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Name: </strong>@Html.DisplayFor(mbox => mbox.Name)</li>
+                    <li class="list-group-item"><strong>Phone: </strong>@Html.DisplayFor(mbox => mbox.PhoneNumber)</li>
+                    <li class="list-group-item"><strong>Email: </strong>@Html.DisplayFor(mbox => mbox.Email)</li>
+                    <li class="list-group-item"><strong>Date: </strong>@Html.DisplayFor(mbox => mbox.CreatedDate)</li>
+                </ul> 
+
+                <a asp-controller="Home" asp-action="Index">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
